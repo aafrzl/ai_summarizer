@@ -14,10 +14,10 @@ const Hero = () => {
         </button>
       </nav>
       <h1 className='head_text'>
-        Summarize Articles with <br className='max-md:hidden' /> <span className='orange_gradient'>OpenAI GPT-4</span>
+        Rangkum Article dengan <br className='max-md:hidden' /> <span className='orange_gradient'>OpenAI GPT-4</span>
       </h1>
       <h2 className='desc'>
-        Simplify your reading exprerience with Sumz, a free and open-source summarization tool that uses the latest GPT-4 model from OpenAI.
+        Aplikasi web untuk merangkum artikel dengan cepat dan mudah, open source dan gratis. di dukung dengan teknologi OpenAI GPT-4.
       </h2>
     </header>
   )

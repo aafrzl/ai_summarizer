@@ -49,7 +49,7 @@ const Demo = () => {
         <form className='relative flex justify-center items-center' onSubmit={handleSubmit}>
           <img src={linkIcon} alt='link icon' className='absolute left-0 my-2 ml-3 w-5' 
           />
-          <input type="url" placeholder='Enter a URL' value={article.url} onChange={(e)=> setArticle({...article, url: e.target.value})} required className='url_input peer' />
+          <input type="url" placeholder='Masukkan URL' value={article.url} onChange={(e)=> setArticle({...article, url: e.target.value})} required className='url_input peer' />
         <button
         className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700'
         type='submit'
@@ -77,10 +77,10 @@ const Demo = () => {
       {/* Display Results */}
       <div className='my-10 max-w-full flex justify-center items-center'>
           {isFetching ? (
-            <img src={loader} alt='loader' className='w-20 h-20 object-contain' />
+            <img src={loader} alt='loader' className='w-16 h-16 object-contain' />
           ) : error ? (
             <p className='font-inter font-bold text-black text-center'>
-              Well, this is embarrassing. Something went wrong. Please try again.
+              Telah terjadi kesalahan, silahkan coba lagi.
               <br/>
               <span className='font-satoshi font-normal text-gray-700'>
                 {error?.data?.message}
@@ -90,10 +90,13 @@ const Demo = () => {
             article.summary && (
             <div className='flex flex-col gap-3'>
               <h2 className='font-satoshi font-bold text-gray-600 text-xl'>
-                Article <span className='blue_gradient'>Summary</span>
+                Hasil <span className='blue_gradient'>Rangkuman</span> 
               </h2>
-              <div className='summary_box'>
-              <p className='font-inter font-medium text-sm text-gray-700'>{article.summary}</p>
+              <div className='summary_box flex flex-col gap-2'>
+                                          <div className='copy_btn' onClick={()=>{handleCopy(article.summary)}}>
+              <img src={copied === article.summary ? tick : copy} alt='copy icon' className='w-[55%] h-[55%] object-contain' />
+            </div>
+              <p className='font-inter font-medium text-sm text-gray-700 text-justify'>{article.summary}</p>
               </div>
             </div>
             )
