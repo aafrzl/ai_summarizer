@@ -17,7 +17,7 @@ const Hero = () => {
         Rangkum Article dengan <br className='max-md:hidden' /> <span className='orange_gradient'>OpenAI GPT-4</span>
       </h1>
       <h2 className='desc'>
-        Aplikasi web untuk merangkum artikel dengan cepat dan mudah, open source dan gratis. di dukung dengan teknologi OpenAI GPT-4.
+        Aplikasi web untuk merangkum artikel dengan cepat, mudah dan juga langsung diterjemahkan dalam bahasa Indonesia, open source dan gratis. di dukung dengan teknologi OpenAI GPT-4.
       </h2>
     </header>
   )
